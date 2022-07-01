@@ -61,3 +61,11 @@ console.log(outputagefreq);
 // "fistname" of all people whose age is less then 30:
 const output1 = users.filter((x) => x.age < 30).map((x) => x.firstName);
 console.log(output1);
+// second way :
+const output2 = users.reduce(function(acc,curr) {
+    if(curr.age < 30){
+        acc.push(curr.firstName);
+    }
+    return acc;
+}, []);
+console.log(output2);
