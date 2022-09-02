@@ -1,0 +1,241 @@
+// var EmployeeNumber = {
+//  company: 'CutShort.io'
+//  }
+//  var emp = Object.create(EmployeeNumber);
+//  delete emp.company
+//  console.log(emp.company);
+ 
+//  function find()
+//  {
+//  return {
+//  bar: "hey there"
+//  };
+//  }
+ 
+//  function good()
+//  {
+//  return
+//  {
+//  bar: "hello there"
+//  };
+//  }
+ 
+//  console.log(find())
+//  console.log(good())
+
+// var functionfun = (function(a) {
+//  delete a;
+//  return a;
+//  })(0);
+ 
+//  console.log(functionfun);
+
+// let password = '1234abcd@'
+ 
+//  let passwordChecker = function(password) {
+//  if((password.includes(1234)) && (password.length > 8)){
+//  return true
+//  }
+ 
+//  return false
+//  }
+ 
+//  console.log(userChecker(userEmail));
+
+// const increment = n => {
+//  return n+1;
+//  }
+ 
+//  const printResult = (n, func) => {
+//  return func(n);
+//  }
+ 
+//  console.log(printResult(2, increment));
+
+// const userDetails = ''
+ 
+//  const userID = userDetails[0]
+ 
+//  if(' ') { 
+//  console.log('User allowed to login');
+//  } else{
+//  console.log('Login failed');
+//  }
+
+// let Info = {
+//  name: 'Niki',
+//  Roll: '17BTCSE22',
+//  Section: 'A',
+ 
+//  dispInfo: function(){
+//  console.log('Hey There! These are details about me!');
+//  }
+//  }
+ 
+//  Info.dispInfo()
+
+// What is the output of 2 << (5-1) ?
+
+// console.log([...'Prabhat'])
+
+// Which one of the following is true, considering objects in javascript?
+
+//  const bird = {
+//  size: 'small',
+//  };
+ 
+//  const mouse = {
+//  name: 'Mickey',
+//  small: true,
+//  };
+
+//  When executed, the below JavaScript code will pop up three alerts. Identify the correct answer?
+
+//  <script type="text/javascript">
+//  var a = 6;
+//  function test() {
+//  var a = 7;
+//  function again() {
+//  var a = 8;
+//  alert(a); // A
+//  }
+//  again();
+//  alert(a); // B
+//  }
+//  test();
+//  alert(a); // C
+//  </script> 
+
+// var foo = "foo";
+ 
+//  var fun = () => {
+//  console.log(this.foo);
+//  }
+ 
+//  var fun2 = fun.bind({foo : "boo"})
+ 
+//  fun2()
+
+// console.log(
+//  new Boolean() == true,
+//  new Boolean("") == true,
+//  new Boolean("0") == true,
+//  new Boolean("1") == true,
+//  new Boolean("true") == true
+//  );
+
+//  (() => {
+//  let x, y;
+//  try {
+//  throw new Error();
+//  } catch (x) {
+//  (x = 1), (y = 2);
+//  console.log(x);
+//  }
+//  console.log(x);
+//  console.log(y);
+//  })();
+
+//  const shape = {
+//  radius: 10,
+//  diameter() {
+//  return this.radius * 2;
+//  },
+//  perimeter: () => 2 * Math.PI * this.radius,
+//  };
+ 
+//  console.log(shape.diameter());
+//  console.log(shape.perimeter());
+
+//  class Counter {
+//  constructor() {
+//  this.count = 0;
+//  }
+ 
+//  increment() {
+//  this.count++;
+//  }
+//  }
+ 
+//  const counterOne = new Counter();
+//  counterOne.increment();
+//  counterOne.increment();
+ 
+//  const counterTwo = counterOne;
+//  counterTwo.increment();
+ 
+//  console.log(counterOne.count);
+
+
+// function Friend(name1, name2) {
+//  this.name1 = name1 || "unknown";
+//  this.name2 = name2 || "unknown"; 
+//  }
+ 
+//  Friend.prototype.fun = function () {
+//  return this.name1 + " " + this.name2;
+//  }
+//  function Student(name1, name2, schoolName, grade)
+//  {
+//  Friend.call(this, name1, name2);
+ 
+//  this.SchoolName = schoolName || "unknown";
+//  this.Grade = grade || 0;
+//  }
+//  Student.prototype = new Friend();
+//  Student.prototype.constructor = Student;
+ 
+//  var std = new Student("Lily","Collins", "XYZ", 15);
+ 
+//  console.log(std.fun()); 
+//  console.log(std instanceof Student); 
+//  console.log(std instanceof Friend); 
+
+
+// let myTodoForToday = {
+//  day: 'Sunday',
+//  meetings: 0,
+//  meetingsDone: 0,
+//  }
+ 
+//  let addMeeting = function(todo, numMeeting = 0){
+//  todo.meetings = todo.meetings + numMeeting
+//  }
+ 
+//  let meetingsDone = function(todo, numMeeting = 0){
+//  todo.meetingsDone = todo.meetingsDone - numMeeting
+//  }
+ 
+//  let resetAllMeetings = function(todo){
+//  todo.meetings = 0
+//  todo.meetingsDone = 0
+//  }
+ 
+//  let getSummaryOfDay = function(todo){
+//  let meetingsLeft = todo.meetings - todo.meetingsDone
+//  return `You have ${meetingsLeft} meetings today!`
+//  }
+ 
+//  addMeeting(myTodoForToday, 5)
+//  addMeeting(myTodoForToday, 7)
+//  meetingsDone(myTodoForToday, 5)
+ 
+//  console.log(myTodoForToday)
+//  console.log(getSummaryOfDay(myTodoForToday))
+
+
+function foo() {
+ var f = (i) => arguments[0] + i;
+ return f(2);
+ }
+ 
+ function boo() {
+ var f = function(i) {
+ arguments[0] + i;
+ }
+ return f(2);
+ }
+ 
+ 
+ console.log(foo(10)); 
+ console.log(boo(10));
